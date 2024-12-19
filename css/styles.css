@@ -451,3 +451,13 @@ footer {
     50% {transform: scale(1.2);}
     100% {transform: scale(1);}
 }
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .more-info-content {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    }
+    .more-info-content .image, .more-info-content .text {
+        max-width: 100%; /* Asegura que la imagen y el texto ocupen el 100% del ancho del contenedor */
+    }
+}
