@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
 }
 
 .logo-container {
@@ -57,6 +58,7 @@ body {
     margin: 0;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
 }
 
 .nav-links li {
@@ -156,13 +158,53 @@ footer {
 }
 
 /* Responsividad */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .logo-container h3 {
+        font-size: 1.3rem;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    section h2 {
+        font-size: 2.2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .footer-img {
+        height: 70px;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 10px;
     }
 
     .hero {
-        padding: 10px 20px; /* Reducir padding en dispositivos móviles */
+        padding: 20px 10px; /* Reducir padding en dispositivos móviles */
+    }
+
+    .logo {
+        height: 60px; /* Reducir tamaño del logo */
+    }
+
+    .logo-container h3 {
+        font-size: 1.1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
     }
 
     section h2 {
@@ -171,5 +213,39 @@ footer {
 
     section p {
         font-size: 1rem;
+    }
+
+    .footer-img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 10px 5px;
+    }
+
+    .logo {
+        height: 50px; /* Reducir más el tamaño del logo */
+    }
+
+    .logo-container h3 {
+        font-size: 1rem;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    section p {
+        font-size: 0.9rem;
+    }
+
+    .footer-img {
+        height: 50px;
     }
 }

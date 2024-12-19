@@ -9,7 +9,7 @@ body {
 
 .parrafo {
     margin: 0 auto;
-    padding: 40px 20px; 
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -96,6 +96,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
 }
 
 .nav-links {
@@ -104,6 +105,7 @@ body {
     margin: 0;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en pantallas pequeñas */
 }
 
 .nav-links li {
@@ -142,7 +144,7 @@ body {
 }
 
 .service {
-    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 255, 255, 0.2)); /* Gradiente dentro del contenedor */
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.39), rgba(0, 0, 255, 0.329), rgba(255, 255, 255, 0.2)); /* Gradiente dentro del contenedor */
     background-size: 400% 400%;
     animation: gradientAnimation 15s ease infinite;
     padding: 20px;
@@ -290,10 +292,31 @@ footer {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
     .service-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+    }
+
+    .footer-img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 20px 10px;
     }
 
     .hero h1 {
@@ -307,6 +330,59 @@ footer {
     .btn-primary {
         font-size: 0.9rem;
         padding: 8px 16px;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    footer {
+        padding: 20px 0;
+    }
+
+    .footer-img {
+        height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    .service h3 {
+        font-size: 1.2rem;
+    }
+
+    .service p {
+        font-size: 0.9rem;
     }
 }
 
@@ -330,11 +406,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
 }
 
 /* Estilo para las imágenes */
 .image img {
-    width: 100%; /* Asegura que la imagen ocupe el 100% de su contenedor */
+    max-width: 100%; /* Asegura que la imagen no ocupe más del 100% de su contenedor */
     height: auto; /* Mantiene la proporción de la imagen */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las imágenes */
@@ -343,16 +420,17 @@ footer {
 /* Estilo para los textos */
 .text {
     flex: 1;
+    max-width: 48%; /* Asegura que el texto no ocupe más del 48% del contenedor en pantallas grandes */
 }
 
 /* Asegura que las imágenes y el texto se alineen correctamente */
 .more-info-content .image {
-    max-width: 50%; /* Limita el tamaño de la imagen */
+    max-width: 48%; /* Asegura que la imagen no sea más ancha del contenedor en pantallas grandes */
+    margin-bottom: 20px;
 }
 
-/* Asegura que el texto ocupe el resto del espacio disponible */
 .more-info-content .text {
-    max-width: 45%; /* Limita el tamaño del texto */
+    max-width: 48%; /* Asegura que el texto no sea más ancho del contenedor */
 }
 
 /* Para la sección 2, aseguramos que la imagen esté a la derecha */
@@ -366,10 +444,10 @@ footer {
     animation-name: pulse;
     animation-duration: 3.5s;
     animation-iteration-count: infinite;
-  }
-  
-  @keyframes pulse {
+}
+
+@keyframes pulse {
     0% {transform: scale(1);}
     50% {transform: scale(1.2);}
     100% {transform: scale(1);}
-  }
+}

@@ -7,13 +7,17 @@
 
 /* Ensure html and body take full height */
 html, body {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.411), rgba(0, 0, 255, 0.363), rgba(255, 255, 255, 0.2));
     height: 100%;
     overflow: hidden; /* Prevents any unwanted scrollbars */
     font-family: 'Arial', sans-serif; /* Default font */
+    animation: gradientAnimation 15s ease infinite;
 }
+
 
 /* Container for the login page */
 .container {
+    animation: gradientAnimation 5s ease infinite;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -147,11 +151,103 @@ html, body {
 
 .grow{
     transition: .5s, color .10s;
-        -webkit-transition: .5s, color .10s;
-        -moz-transition: .5s, color .10s;
+    -webkit-transition: .5s, color .10s;
+    -moz-transition: .5s, color .10s;
 }
 .grow:hover{
     transform: scale3d(1.5, 1.5, 0.3);
-        -webkit-transform: scale3d(1.5, 1.5, 0.3);
-        -moz-transform: scale3d(1.5, 1.5, 0.3);
+    -webkit-transform: scale3d(1.5, 1.5, 0.3);
+    -moz-transform: scale3d(1.5, 1.5, 0.3);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .left-side, .right-side {
+        width: 100%;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .form-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .form-container input {
+        font-size: 0.9rem;
+    }
+
+    .form-container .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .left-side .btn-primary {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .left-side .logo-container img {
+        height: 150px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-container input {
+        font-size: 0.8rem;
+    }
+
+    .form-container .btn-primary {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .left-side .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .left-side .logo-container img {
+        height: 120px;
+    }
+
+    .form-container {
+        padding: 10px;
+    }
+
+    .form-container h2 {
+        font-size: 1rem;
+    }
+
+    .form-container input {
+        font-size: 0.7rem;
+    }
+
+    .form-container .btn-primary {
+        font-size: 0.7rem;
+        padding: 5px;
+    }
+
+    .left-side .btn-primary {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
 }
