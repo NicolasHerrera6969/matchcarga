@@ -1,0 +1,375 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Usar la nueva fuente Roboto */
+    line-height: 1.6;
+    color: #333; /* Texto general en gris oscuro */
+    background-color: #fbfcfe;
+}
+
+.parrafo {
+    margin: 0 auto;
+    padding: 40px 20px; 
+    text-align: center;
+}
+
+.parrafo p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #555; /* Texto del párrafo en gris medio */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a1d29, #2a2d39); /* Gradiente para un mejor efecto visual */
+    color: white;
+    text-align: center;
+    padding: 60px 20px; /* Aumentar el padding para más espacio */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: rgb(48, 80, 223); /* Color azulado */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background: rgb(224, 48, 63); /* Brillo más claro */
+    box-shadow: 0 0 10px rgb(238, 90, 90);
+}
+
+/* Contenedor del logo y título */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y el título */
+    text-decoration: none; /* Quita subrayado del enlace */
+    cursor: pointer; /* Cambia el cursor a forma de mano */
+    transition: transform 0.2s, color 0.3s;
+}
+
+/* Efecto hover para el logo-container */
+.logo-container:hover {
+    transform: scale(1.05); /* Pequeño efecto de aumento */
+    color: rgb(170, 183, 239); /* Cambia el color del texto */
+}
+
+.logo {
+    height: 80px; /* Ajusta el tamaño según sea necesario */
+    width: auto;
+}
+
+/* Título junto al logo */
+.logo-container h3 {
+    font-size: 1.5rem;
+    color: #f1ecce; /* Color claro para contrastar con el fondo oscuro */
+    margin: 0;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #f1ecce; /* Color claro para contrastar con el fondo oscuro */
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: rgb(170, 183, 239); /* Color azulado en hover */
+}
+
+/* Servicios Section */
+.services {
+    background: #f4f4f4; /* Fondo gris claro para diferenciarse */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #1a1d29; /* Negro azulado */
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.service {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 255, 255, 0.2)); /* Gradiente dentro del contenedor */
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    flex: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    color: rgb(48, 80, 223); /* Color azulado */
+    margin-bottom: 10px;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #444; /* Más oscuro para mejor legibilidad */
+}
+
+/* Formulario de Contacto */
+.contact {
+    background: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #1a1d29; /* Negro azulado */
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #f4f4f4;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(48, 80, 223); /* Button background color */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+form .btn-primary:hover {
+    background-color: rgb(224, 48, 63); /* Hover effect */
+    box-shadow: 0 0 10px rgb(238, 90, 90);
+}
+
+footer {
+    background: #1a1d29; /* Negro azulado */
+    color: white;
+    text-align: center;
+    padding: 40px 0; /* Aumentar padding para más espacio */
+    font-size: 0.9rem;
+    position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
+}
+
+.footer-content {
+    position: relative; /* Para asegurar que el contenido del footer se posicione correctamente */
+    z-index: 1; /* Asegura que el contenido del footer esté por encima de las imágenes */
+}
+
+.footer-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px; /* Ajusta el tamaño de las imágenes según sea necesario */
+}
+
+.footer-img.left {
+    left: 0;
+    margin-left: 20px; /* Ajusta la distancia desde el borde izquierdo */
+}
+
+.footer-img.right {
+    right: 0;
+    margin-right: 20px; /* Ajusta la distancia desde el borde derecho */
+}
+
+.contactenos {
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+
+.contactenos p {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #f1ecce;
+}
+
+.btn-social {
+    display: inline-block;
+    margin: 5px 15px;
+    font-size: 1.3rem;
+    color: #f1ecce;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.btn-social:hover {
+    color: rgb(170, 183, 239); /* Efecto hover */
+    text-shadow: 0 0 8px rgb(170, 183, 239);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* SECCION OCULTA */
+.hidden {
+    display: none;
+}
+
+/* Estilo para las secciones ocultas */
+.more-info {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc; /* Borde para hacer las secciones divisibles */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro para las secciones */
+    overflow: hidden; /* Asegura que las imágenes no sobresalgan */
+}
+
+/* Estilo para el contenido de cada sección */
+.more-info-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilo para las imágenes */
+.image img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% de su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de las imágenes */
+}
+
+/* Estilo para los textos */
+.text {
+    flex: 1;
+}
+
+/* Asegura que las imágenes y el texto se alineen correctamente */
+.more-info-content .image {
+    max-width: 50%; /* Limita el tamaño de la imagen */
+}
+
+/* Asegura que el texto ocupe el resto del espacio disponible */
+.more-info-content .text {
+    max-width: 45%; /* Limita el tamaño del texto */
+}
+
+/* Para la sección 2, aseguramos que la imagen esté a la derecha */
+#seccion-oculta-2 .more-info-content {
+    flex-direction: row-reverse; /* Cambia la dirección de los elementos, la imagen se moverá a la derecha */
+}
+
+/* ANIM BOTON */
+
+.pulse {
+    animation-name: pulse;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes pulse {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+  }

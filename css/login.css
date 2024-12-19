@@ -1,0 +1,157 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    overflow: hidden; /* Prevents any unwanted scrollbars */
+    font-family: 'Arial', sans-serif; /* Default font */
+}
+
+/* Container for the login page */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Left side styling */
+.left-side {
+    background: #1a1d29; /* Same color as the header */
+    color: white;
+    width: 50%;
+    height: 100vh; /* Ensure it takes the full height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px; /* Add padding if needed */
+}
+
+.left-side .logo-container {
+    margin-bottom: 40px; /* Increase space between logo and other elements */
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-side .logo-container img {
+    height: 190px; /* Adjust size of the logo */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    max-height: 100%; /* Ensure it doesn't exceed the container's height */
+}
+
+.left-side p {
+    margin: 20px 0; /* Add space above and below paragraphs */
+}
+
+.left-side .btn-primary {
+    background-color: rgb(48, 80, 223); /* Button background color */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px; /* Add space above the button */
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.left-side .btn-primary:hover {
+    background-color: rgb(224, 48, 63); /* Hover effect */
+    box-shadow: 0 0 10px rgb(238, 90, 90);
+}
+
+/* Right side styling */
+.right-side {
+    background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2), rgba(255, 255, 255, 0.2));
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    width: 50%;
+    height: 100vh; /* Ensure it takes the full height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(48, 80, 223); /* Button background color */
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.form-container .btn-primary:hover {
+    background-color: rgb(224, 48, 63); /* Hover effect */
+    box-shadow: 0 0 10px rgb(238, 90, 90);
+}
+
+/* Additional CSS for Register form */
+.hidden {
+    display: none;
+}
+
+/* ANIMACION BTN INICIO */
+
+.grow{
+    transition: .5s, color .10s;
+        -webkit-transition: .5s, color .10s;
+        -moz-transition: .5s, color .10s;
+}
+.grow:hover{
+    transform: scale3d(1.5, 1.5, 0.3);
+        -webkit-transform: scale3d(1.5, 1.5, 0.3);
+        -moz-transform: scale3d(1.5, 1.5, 0.3);
+}
