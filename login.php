@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="left-side">
-            <a href="index.html" class="logo-container">
+            <a href="index.php" class="logo-container">
                 <img src="img/Logo1.png" alt="Logo MatchCarga" class="logo grow">
             </a>
             <p>¿No tiene una cuenta?</p>
@@ -20,7 +20,7 @@
         </div>
         <div class="right-side">
             <div class="form-container">
-                <form id="auth-form">
+                <form id="auth-form" action="php/validar.php" method="POST">
                     <h2>Iniciar Sesión</h2>
                     <label for="username">Usuario</label>
                     <input type="text" id="username" name="username" required>

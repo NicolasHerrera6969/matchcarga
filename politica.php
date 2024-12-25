@@ -13,13 +13,13 @@
     <header class="hero">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo-container">
+                <a href="index.php" class="logo-container">
                     <img src="img/Logo1.png" alt="Logo MatchCarga" class="logo">
                     <h3>MatchCarga</h3>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
                 </ul>
             </nav>
         </div>

@@ -18,9 +18,9 @@
                     <h3>MatchCarga</h3>
                 </a>
                 <ul class="nav-links">
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="login.html">Iniciar Sesión</a></li>
-                    <li><a href="politica.html">Políticas</a></li>
+                    <li><a href="nosotros.php">Nosotros</a></li>
+                    <li><a href="login.php">Iniciar Sesión</a></li>
+                    <li><a href="politica.php">Políticas</a></li>
                 </ul>
             </nav>
             <h1>MatchCarga</h1>
